@@ -7,7 +7,15 @@
     <title>Developer Skills</title>
 </head>
 <body>
-    <h1>Home Page</h1>
-    <p>Check out the skills I've learned in GA SEI!</p>
+    <h1>My Skills</h1>
+    <ul>
+        <% skills.forEach(function(s) { %>
+            <li>
+              <%= s.skill %>
+                - 
+              <%= s.learned ? 'learned' : 'not learned' %>
+            </li>
+          <% }); %>
+    </ul>
 </body>
 </html>
