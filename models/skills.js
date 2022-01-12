@@ -1,9 +1,9 @@
 const skills = [
-    {skill: 'HTML5', learned: true},
-    {skill: 'JavaScript', learned: false},
-    {skill: 'CSS', learned: true},
-    {skill: 'React', learned: false},
-    {skill: 'django', learned: false}
+    {id: 101, skill: 'HTML5', learned: true},
+    {id: 102, skill: 'JavaScript', learned: false},
+    {id: 103, skill: 'CSS', learned: true},
+    {id: 104, skill: 'React', learned: false},
+    {id: 105, skill: 'django', learned: false}
   ];
   
   module.exports = {
@@ -15,6 +15,7 @@ const skills = [
     return skills;
   }
 
-  function getOne() {
-    return skills.find(skill => skill.skill === skill);
+  function getOne(id) {
+    id = parseInt(id);
+    return skills.find(skill => skill.id === id);
   }
