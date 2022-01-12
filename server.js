@@ -13,6 +13,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(function(req, res, next) {
+  console.log('Check out my skills!')
+  res.locals.time = new Date().toLocaleTimeString();
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
+
+app.use(function(req, res, next) {
+  console.log('Check out my skills!')
+  res.locals.time = new Date().toLocaleTimeString();
+  next();
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

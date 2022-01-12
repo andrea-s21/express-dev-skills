@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1 id="skills-idx">Skills</h1>
+<h1>Skills as of <%= time %></h1>
 <ul>
   <% skills.forEach(function(s) { %>
     <li>
@@ -8,6 +8,9 @@
         <%= s.skill %>
       </a>
         - 
+        <a href="/skills/<%= s.id %>">
+          <%= s.todo %>
+        </a>
       <%= s.learned ? 'learned' : 'not learned' %>
     </li>
   <% }); %>
