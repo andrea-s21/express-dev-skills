@@ -12,7 +12,8 @@ const Skill = require('../models/skills');
   }
 
   function show(req, res) {
+    const skill = Skill.getOne(req.params.id)
     res.render('skills/show', {
-      skill: Skill.getOne(req.params.skill),
+      
     });
   }
