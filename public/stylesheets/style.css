@@ -5,6 +5,30 @@ body {
 
 a {
   color: yellowgreen;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+}
+
+input {
+  border-color: yellowgreen;
+  border-width: 5px;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+form {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+button {
+  background-color: yellowgreen;
+  border-color: yellowgreen;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  border-radius: 2px;
 }
 
 h1 {
@@ -16,11 +40,6 @@ h1 {
 #skills-idx {
   font-family: 'Luckiest Guy', cursive;
   font-size: 40px;
-}
-
-nav {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 20px;
 }
 
 ul {
@@ -58,3 +77,5 @@ ul {
 li {
   list-style: none;
 }
+
+
