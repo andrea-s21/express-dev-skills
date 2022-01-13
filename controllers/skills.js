@@ -4,8 +4,27 @@ const Skill = require('../models/skills');
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteSkill,
+    edit,
+    update
   };
+
+  function update(req, res) {
+    req.body.done = !!req.body.done;
+    Skill.update(req.params.id, req.body);
+    res.redirect(`/skills/${req.params.id}`);
+  }
+
+  function edit(req, res) {
+    const skill = Skill.getOne(req.params.id);
+    res.render('skills/edit', {skill});
+    res.redirect('/skills');
+  }
+
+  function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.id);
+  }
 
   function create(req, res) {
     console.log(req.body);

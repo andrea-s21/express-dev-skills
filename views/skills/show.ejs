@@ -3,5 +3,6 @@
   <h1 id="skill-h1">Skill #<%= skill.id %> </h1>
     <h3 id="skill-id"><%= skill.skill %></h3>
     <h3 id="skill-learned">Learned: <%= skill.learned ? 'Yes' : 'No' %></h3>
+    <a href="/skills/<%= skill.id %>/edit">EDIT SKILL</a>
   </body>
 <%- include('../partials/footer') %>
