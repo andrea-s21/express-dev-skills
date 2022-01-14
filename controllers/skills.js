@@ -13,7 +13,7 @@ const Skill = require('../models/skills');
   function update(req, res) {
     req.body.done = !!req.body.done;
     Skill.update(req.params.id, req.body);
-    res.redirect(`/skills/${req.params.id}`);
+    res.redirect('/skills');
   }
 
   function edit(req, res) {
@@ -24,6 +24,7 @@ const Skill = require('../models/skills');
 
   function deleteSkill(req, res) {
     Skill.deleteOne(req.params.id);
+    res.redirect('/skills');
   }
 
   function create(req, res) {

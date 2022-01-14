@@ -26,8 +26,7 @@ let skills = [
   }
 
   function create(skill) {
-    skill.id = Date.now() % 200;
-    skill.learned = false;
+    skill.id = Math.floor(Math.random() * 300);
     skills.push(skill);
   }
   
