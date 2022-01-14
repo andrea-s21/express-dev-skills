@@ -1,3 +1,4 @@
+
 let skills = [
     {id: 101, skill: 'HTML5', learned: true},
     {id: 102, skill: 'JavaScript', learned: false},
@@ -16,7 +17,7 @@ let skills = [
 
   function update(id, newSkill) {
     id = parseInt(id);
-    const skill = skills.find(skill => skill.id !== id);
+    const skill = skills.find(skill => skill.id == id);
     Object.assign(skill, newSkill);
   }
 

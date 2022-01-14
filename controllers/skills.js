@@ -1,4 +1,4 @@
-const Skill = require('../models/skills');
+const Skill = require('../models/skill');
 
  module.exports = {
     index,
@@ -11,15 +11,14 @@ const Skill = require('../models/skills');
   };
 
   function update(req, res) {
-    req.body.done = !!req.body.done;
+    req.body.learned = !!req.body.learned;
     Skill.update(req.params.id, req.body);
-    res.redirect('/skills');
+    res.redirect(`/skills/${req.params.id}`);
   }
 
   function edit(req, res) {
     const skill = Skill.getOne(req.params.id);
     res.render('skills/edit', {skill});
-    res.redirect('/skills');
   }
 
   function deleteSkill(req, res) {

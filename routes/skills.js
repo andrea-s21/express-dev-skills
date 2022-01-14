@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var skillsCtrl = require('../controllers/skills');
-const { render } = require('../server');
-
 
 // GET index
 router.get('/', skillsCtrl.index);
